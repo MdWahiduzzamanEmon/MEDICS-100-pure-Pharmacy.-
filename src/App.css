@@ -46,3 +46,21 @@ color: #02B9B1;
   outline: none;
 
 }
+.form-bg{
+  height:800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+.form{
+  background-image:linear-gradient(rgba(255, 255, 255, 0.363), rgba(255, 255, 255, 0.521), rgba(255, 255, 255, 0.288));
+  border-radius: 10px;
+  z-index: 2;
+}
+.sign-in-design{
+  text-decoration: none;
+  color:#072264;
+}

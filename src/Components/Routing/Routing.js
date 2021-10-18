@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AllProducts from '../AllProducts/AllProducts';
 import Error from '../Eroor/Error';
+import Login from '../Form/Login/Login';
+import Register from '../Form/Register/Register';
 import Header from '../Home/Header/Header';
 import Home from '../Home/Home/Home';
 import ProductDetails from '../ProductDetails/ProductDetails';
@@ -23,6 +25,12 @@ const Routing = () => {
             </Route>
             <Route path="/productDetails/:productID">
               <ProductDetails />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/signin">
+              <Login />
             </Route>
             <Route path="*">
               <Error />
