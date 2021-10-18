@@ -29,3 +29,16 @@ color: #02B9B1;
   background-color: #02B9B1;
  /* height31.25rem; */
 }
+.image-height{
+  width: 200px;
+  height: 250px;
+}
+.discount-design{
+  margin-left:8px;
+  padding:5px;
+  color:rgb(129, 11, 11);
+  background-color: rgb(245, 132, 132);
+  border-radius: 15px;
+  font-size:12px;
+  font-weight: bold;
+}

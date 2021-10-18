@@ -18,6 +18,9 @@ const Header = () => {
                 <Nav.Link as={Link} to="/home">
                   <span className="navLink-color">Home</span>
                 </Nav.Link>
+                <Nav.Link as={Link} to="/home#product">
+                  <span className="navLink-color">Products</span>
+                </Nav.Link>
                 <Nav.Link href="#pricing">Pricing</Nav.Link>
               </Nav>
               <Nav>
