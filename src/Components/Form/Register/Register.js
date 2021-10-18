@@ -12,7 +12,7 @@ const Register = () => {
           style={{ backgroundImage: `url(${form_bg})` }}
           className="form-bg pt-5"
         >
-          <Form className="container mt-5 p-5 w-50 border shadow-lg form">
+          <Form className="container mt-5 p-5 w-75 border shadow-lg form">
             <div>
               <img src={logo} alt="" className="img-fluid pb-4" />
             </div>

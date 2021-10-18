@@ -1,19 +1,37 @@
 import React from 'react';
 import logo from "../../../images/site-logo.png";
 import form_bg from "../../../images/sheap.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import googleLogo from "../../../images/google-logo-9824-32x32.ico";
 import twitterLogo from "../../../images/logo-twitter-png-5860-32x32.ico";
 import { Form } from 'react-bootstrap';
+import useAuth from '../../../Hooks/useAuth';
 
 const Login = () => {
+
+    const { googleSignIn, setLoading, setUser } = useAuth();
+    const location = useLocation();
+    const redirect_url = location?.state?.from||"/home";
+    const history = useHistory();
+    
+    const redirectGoogleSign = () => {
+        googleSignIn()
+            .then((result) => {
+                setUser(result.user);
+              history.push(redirect_url)
+          })
+            .catch((error) => { })
+            .finally(() => {
+                setLoading(false);
+            })
+    }
     return (
       <>
         <section
           style={{ backgroundImage: `url(${form_bg})` }}
           className="form-bg pt-5"
         >
-          <Form className="container mt-5 p-5 w-50 border shadow-lg form">
+          <Form className="container mt-5 p-5 w-75 border shadow-lg form">
             <div>
               <img src={logo} alt="" className="img-fluid pb-4" />
             </div>
@@ -43,7 +61,10 @@ const Login = () => {
             </Link>
 
             <div>
-              <button className="btn  rounded-circle border border-info mx-3">
+              <button
+                className="btn  rounded-circle border border-info mx-3"
+                onClick={redirectGoogleSign}
+              >
                 <img src={googleLogo} alt="" className="img-fluid" />
               </button>
               <button className="btn rounded-circle border border-info mx-3">
