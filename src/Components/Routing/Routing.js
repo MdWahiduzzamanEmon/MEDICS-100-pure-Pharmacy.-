@@ -4,6 +4,7 @@ import AllProducts from '../AllProducts/AllProducts';
 import Error from '../Eroor/Error';
 import Header from '../Home/Header/Header';
 import Home from '../Home/Home/Home';
+import ProductDetails from '../ProductDetails/ProductDetails';
 
 const Routing = () => {
     return (
@@ -19,6 +20,9 @@ const Routing = () => {
             </Route>
             <Route path="/allproducts">
               <AllProducts />
+            </Route>
+            <Route path="/productDetails/:productID">
+              <ProductDetails />
             </Route>
             <Route path="*">
               <Error />

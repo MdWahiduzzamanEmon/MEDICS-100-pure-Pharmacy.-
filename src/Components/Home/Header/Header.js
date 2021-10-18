@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/site-logo.png'
+import { HashLink } from "react-router-hash-link";
+
 
 const Header = () => {
     return (
@@ -18,7 +20,7 @@ const Header = () => {
                 <Nav.Link as={Link} to="/home">
                   <span className="navLink-color">Home</span>
                 </Nav.Link>
-                <Nav.Link as={Link} to="/home#product">
+                <Nav.Link as={HashLink} to="/home#product">
                   <span className="navLink-color">Products</span>
                 </Nav.Link>
                 <Nav.Link href="#pricing">Pricing</Nav.Link>

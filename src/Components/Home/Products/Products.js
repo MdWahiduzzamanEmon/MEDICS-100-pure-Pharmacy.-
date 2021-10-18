@@ -12,7 +12,7 @@ const Products = () => {
         setFilterProduct(value);
     }
     return (
-      <div className="container py-5">
+      <div className="container py-5" id="product">
         <h2>Featured Products</h2>
         <div>
           <button
