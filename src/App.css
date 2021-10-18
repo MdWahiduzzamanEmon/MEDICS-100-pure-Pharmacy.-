@@ -68,3 +68,6 @@ color: #02B9B1;
   border: 1px dashed #02B9B1;
   transition: .5s ease all;
 }
+.footer-bg{
+  background: #050F33;
+}
