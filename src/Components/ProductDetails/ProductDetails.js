@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import useData from '../../Hooks/useData';
-
+import bg from '../../images/sheap.png'
 const ProductDetails = () => {
     const { productID } = useParams();
     
@@ -20,7 +20,15 @@ const ProductDetails = () => {
     // console.log(indivisualProduct);
     return (
       <>
-        <section className="my-5 py-5">
+        <section
+          className="py-5"
+          style={{
+            backgroundImage: `url(${bg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
           <div className="container">
             <div className="row">
               <div className="col-md-5">

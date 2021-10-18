@@ -4,7 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import Routing from './Components/Routing/Routing';
 import AuthProvider from './Context/AuthProvider';
- import { toast } from "react-toastify";
+import { toast } from "react-toastify";
+
+ import "aos/dist/aos.css"; 
+
+
+
+  
  toast.configure();
 function App() {
   return (

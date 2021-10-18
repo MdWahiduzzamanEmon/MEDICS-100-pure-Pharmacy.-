@@ -5,15 +5,15 @@ const useData = () => {
     const [filterProduct, setFilterProduct] = useState([]);
 
     useEffect(() => {
-        fetch(
-          "https://raw.githubusercontent.com/MdWahiduzzamanEmon/medics-db.json/main/db.json"
-        )
-          .then((res) => res.json())
-            .then((data) => {
-                setFilterProduct(data)
-                 setProducts(data);
-            });
-    },[])
+      fetch(
+        "https://raw.githubusercontent.com/MdWahiduzzamanEmon/medics-db.json/main/db.json"
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setFilterProduct(data);
+          setProducts(data);
+        });
+    }, []);
 
     return {
       setProducts,

@@ -29,8 +29,18 @@ const Products = () => {
             New
           </button>
         </div>
-        <div className="pt-5" style={{ backgroundImage: `url(${bg})`,backgroundSize:"cover",backgroundPosition:"center",backgroundAttachment:"fixed" }}>
-          <Row xs={1} md={4} className="g-4">
+
+        {/* product section   */}
+        <div
+          className="pt-5"
+          style={{
+            backgroundImage: `url(${bg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+          }}
+        >
+          <Row xs={1} md={4} className="g-4" data-aos="slide-up">
             {filterProduct?.slice(0, 8).map((product) => (
               <Product key={product.id} product={product}></Product>
             ))}
