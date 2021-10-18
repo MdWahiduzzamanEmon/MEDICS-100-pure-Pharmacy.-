@@ -7,6 +7,7 @@ import Register from '../Form/Register/Register';
 import Header from '../Home/Header/Header';
 import Home from '../Home/Home/Home';
 import ProductDetails from '../ProductDetails/ProductDetails';
+import PrivateRoute from '../../PrivateRoute/PrivateRoute'
 
 const Routing = () => {
     return (
@@ -23,9 +24,9 @@ const Routing = () => {
             <Route path="/allproducts">
               <AllProducts />
             </Route>
-            <Route path="/productDetails/:productID">
+            <PrivateRoute path="/productDetails/:productID">
               <ProductDetails />
-            </Route>
+            </PrivateRoute>
             <Route path="/register">
               <Register />
             </Route>

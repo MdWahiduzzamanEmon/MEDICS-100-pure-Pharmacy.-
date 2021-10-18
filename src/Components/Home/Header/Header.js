@@ -30,14 +30,14 @@ const Header = () => {
 
               <Nav>
                 {user?.uid ? (
-                  <div>
-                    <h4>{user.displayName}</h4>
+                  <div className="d-flex justify-content-center align-items-center">
+                    <h6 className="fw-bold">{user.displayName}</h6>
                     <div>
-                      <img src={user.photoURL} alt="" />
+                      <img src={user.photoURL} alt="" className="w-50 rounded-circle" />
                     </div>
-                    <p onClick={Logout}>
+                    <button className="btn" onClick={Logout}>
                       <i className="fas fa-sign-out-alt navLink-color"></i>
-                    </p>
+                    </button>
                   </div>
                 ) : (
                   <Link to="/register">

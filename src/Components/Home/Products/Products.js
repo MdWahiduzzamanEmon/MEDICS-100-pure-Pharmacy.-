@@ -3,6 +3,7 @@ import { Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useData from '../../../Hooks/useData';
 import Product from '../Product/Product';
+import bg from '../../../images/sheap.png'
 
 const Products = () => {
     const { products, filterProduct, setFilterProduct } = useData();
@@ -28,18 +29,20 @@ const Products = () => {
             New
           </button>
         </div>
-        <div className="pt-5">
+        <div className="pt-5" style={{ backgroundImage: `url(${bg})`,backgroundSize:"cover",backgroundPosition:"center",backgroundAttachment:"fixed" }}>
           <Row xs={1} md={4} className="g-4">
             {filterProduct?.slice(0, 8).map((product) => (
               <Product key={product.id} product={product}></Product>
             ))}
           </Row>
-            </div>
-            <div>
-                <Link to='/allproducts'>
-                    <button className="btn btn-color mt-5 fw-bold rounded-pill">All Product </button>
-                </Link>
-            </div>
+        </div>
+        <div>
+          <Link to="/allproducts">
+            <button className="btn btn-color mt-5 fw-bold rounded-pill">
+              All Product{" "}
+            </button>
+          </Link>
+        </div>
       </div>
     );
 };

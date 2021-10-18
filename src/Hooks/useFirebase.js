@@ -25,19 +25,17 @@ const useFirebase = () => {
     }
 
 //  state change 
-    useEffect(() => {
-        const unsubscribe = () => {
-            onAuthStateChanged(auth, (user) => {
-              if (user) {
-                setUser(user);
-              } else {
-                  setUser({});
-                }
-                setLoading(false);
-            });
-        }
-        return unsubscribe;
-    })
+     useEffect(() => {
+       const unSubcribe = onAuthStateChanged(auth, (user) => {
+         if (user) {
+           setUser(user);
+         } else {
+           setUser({});
+         }
+        setLoading(false);
+       });
+       return unSubcribe;
+     }, []);
     //logOUt
     const Logout = () => {
         setLoading(true);

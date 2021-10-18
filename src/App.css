@@ -64,3 +64,7 @@ color: #02B9B1;
   text-decoration: none;
   color:#072264;
 }
+.border-design:hover{
+  border: 1px dashed #02B9B1;
+  transition: .5s ease all;
+}

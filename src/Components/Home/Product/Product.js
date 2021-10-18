@@ -7,7 +7,7 @@ const Product = (props) => {
     return (
       <div>
         <Col>
-          <Card className="py-3">
+          <Card className="py-3 border-design">
             <div className="position-relative">
               <img src={image} className="image-height " alt="" />
               <h4 className="position-absolute top-0 start-0 discount-design">

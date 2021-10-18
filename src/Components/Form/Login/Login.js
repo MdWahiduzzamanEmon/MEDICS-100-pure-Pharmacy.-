@@ -6,6 +6,7 @@ import googleLogo from "../../../images/google-logo-9824-32x32.ico";
 import twitterLogo from "../../../images/logo-twitter-png-5860-32x32.ico";
 import { Form } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
+import { toast } from 'react-toastify';
 
 const Login = () => {
 
@@ -18,6 +19,7 @@ const Login = () => {
         googleSignIn()
             .then((result) => {
                 setUser(result.user);
+                toast("Log in Succesfull. Enjoy!!")
               history.push(redirect_url)
           })
             .catch((error) => { })
