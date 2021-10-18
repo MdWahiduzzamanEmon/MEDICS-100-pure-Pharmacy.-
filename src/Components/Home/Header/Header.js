@@ -10,7 +10,12 @@ const Header = () => {
     const { user, Logout } = useAuth();
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg" bg="light">
+        <Navbar
+          collapseOnSelect
+          expand="lg"
+          bg="light"
+          fixed="top"
+        >
           <Container>
             <Navbar.Brand as={Link} to="/home">
               <img src={logo} alt="" className="img-fluid" />
@@ -33,7 +38,11 @@ const Header = () => {
                   <div className="d-flex justify-content-center align-items-center">
                     <h6 className="fw-bold">{user.displayName}</h6>
                     <div>
-                      <img src={user.photoURL} alt="" className="w-50 rounded-circle" />
+                      <img
+                        src={user.photoURL}
+                        alt=""
+                        className="w-50 rounded-circle"
+                      />
                     </div>
                     <button className="btn" onClick={Logout}>
                       <i className="fas fa-sign-out-alt navLink-color"></i>

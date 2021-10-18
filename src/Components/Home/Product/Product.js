@@ -22,7 +22,9 @@ const Product = (props) => {
               <h2 className="medium-text fw-bold">${price}</h2>
             </Card.Body>
             <Link to={`/productDetails/${id}`}>
-              <button className="w-50 mx-auto btn btn-color">Details</button>
+              <button className="w-50 mx-auto btn btn-color">
+                <i className="fas fa-pills text-warning me-3"></i>Details
+              </button>
             </Link>
           </Card>
         </Col>

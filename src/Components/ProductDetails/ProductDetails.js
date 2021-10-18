@@ -21,7 +21,7 @@ const ProductDetails = () => {
     return (
       <>
         <section
-          className="py-5"
+          className="py-5 mt-5"
           style={{
             backgroundImage: `url(${bg})`,
             backgroundSize: "cover",

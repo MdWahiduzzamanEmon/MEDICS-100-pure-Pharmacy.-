@@ -8,6 +8,7 @@ import Header from '../Home/Header/Header';
 import Home from '../Home/Home/Home';
 import ProductDetails from '../ProductDetails/ProductDetails';
 import PrivateRoute from '../../PrivateRoute/PrivateRoute'
+import Footer from '../Footer/Footer';
 
 const Routing = () => {
     return (
@@ -36,7 +37,8 @@ const Routing = () => {
             <Route path="*">
               <Error />
             </Route>
-          </Switch>
+                </Switch>
+                <Footer/>
         </Router>
       </div>
     );

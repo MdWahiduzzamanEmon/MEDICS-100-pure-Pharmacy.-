@@ -31,37 +31,40 @@ const Login = () => {
       <>
         <section
           style={{ backgroundImage: `url(${form_bg})` }}
-          className="form-bg pt-5"
+          className="form-bg pt-5 mt-5"
         >
-          <Form className="container mt-5 p-5 w-75 border shadow-lg form">
-            <div>
-              <img src={logo} alt="" className="img-fluid pb-4" />
-            </div>
-            <h2 className="fw-bold big-text">Sign In</h2>
-            <Form.Floating className="mb-3">
-              <Form.Control
-                id="floatingInputCustom"
-                type="email"
-                placeholder="name@example.com"
-                required
-              />
-              <label htmlFor="floatingInputCustom">Email</label>
-            </Form.Floating>
-            <Form.Floating>
-              <Form.Control
-                id="floatingPasswordCustom"
-                type="password"
-                placeholder="Password"
-                required
-              />
-              <label htmlFor="floatingPasswordCustom">Password</label>
-            </Form.Floating>
+          <div className="container mt-5 p-5 w-75 border shadow-lg form">
+            <Form>
+              <div>
+                <img src={logo} alt="" className="img-fluid pb-4" />
+              </div>
+              <h2 className="fw-bold big-text">Sign In</h2>
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="floatingInputCustom"
+                  type="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label htmlFor="floatingInputCustom">Email</label>
+              </Form.Floating>
+              <Form.Floating>
+                <Form.Control
+                  id="floatingPasswordCustom"
+                  type="password"
+                  placeholder="Password"
+                  required
+                />
+                <label htmlFor="floatingPasswordCustom">Password</label>
+              </Form.Floating>
 
-            <button className="btn btn-color rounded-pill my-3">Sign In</button>
-            <Link to="/register" className="sign-in-design">
-              <p>Please Register?</p>
-            </Link>
-
+              <button className="btn btn-color rounded-pill my-3">
+                Sign In
+              </button>
+              <Link to="/register" className="sign-in-design">
+                <p>Please Register?</p>
+              </Link>
+            </Form>
             <div>
               <button
                 className="btn  rounded-circle border border-info mx-3"
@@ -73,7 +76,7 @@ const Login = () => {
                 <img src={twitterLogo} alt="" className="img-fluid " />
               </button>
             </div>
-          </Form>
+          </div>
         </section>
       </>
     );

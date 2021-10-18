@@ -9,7 +9,7 @@ const Banner = () => {
           backgroundImage: `url(${shape})`,
           backgroundAttachment: "fixed",
         }}
-        className="pb-4 mt-3"
+        className="py-3 mt-5"
       >
         <div className="d-md-flex flex-md-row justify-content-center align-items-center">
           <div className="" data-aos="fade-right">
