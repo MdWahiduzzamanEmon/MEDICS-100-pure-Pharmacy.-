@@ -13,7 +13,10 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 const Login = () => {
-
+window.scrollTo({
+  top: 0,
+  behavior: "smooth",
+});
     const {
       googleSignIn,
       twitterSignIn,
