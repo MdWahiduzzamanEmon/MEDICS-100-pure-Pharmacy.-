@@ -31,7 +31,18 @@ const Header = () => {
                 <Nav.Link as={Link} to="/contact">
                   <span className="navLink-color">Contact</span>
                 </Nav.Link>
-                
+                <Nav.Link
+                  as={Link}
+                  to="/cartitem"
+                  className="fw-bold text-dark"
+                >
+                  <p className="position-relative">
+                    <i className="fas fa-shopping-cart navLink-color"></i>
+                    <span className="position-absolute translate-middle badge rounded-circle bg-danger">
+                      99
+                    </span>
+                  </p>
+                </Nav.Link>
               </Nav>
 
               <Nav>
