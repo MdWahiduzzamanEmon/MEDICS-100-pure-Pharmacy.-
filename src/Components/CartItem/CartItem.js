@@ -1,13 +1,36 @@
 import React from 'react';
 import { Col, Form, Row } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import { useAddCart } from '../../Context/AddtoCart';
 import useAuth from '../../Hooks/useAuth';
 import bg from '../../images/sheap.png'
 import CartItemProduct from './CartItemProduct';
 import CartTOtalPrice from './CartTOtalPrice';
+import { useHistory } from "react-router";
+import { toast } from 'react-toastify';
 const CartItem = () => {
   const { user } = useAuth();
   const { cartProduct } = useAddCart();
+  const [address,setAddress]=React.useState("")
+  const [city, setCity] = React.useState("");
+  const history = useHistory();
+
+  const getAdddress = (e) => {
+    setAddress(e.target.value)
+  }
+  const getCity = (e) => {
+    setCity(e.target.value)
+    console.log(e.target.value);
+  }
+  const handleOrder = (e) => {
+    e.preventDefault();
+    console.log(city, address);
+  }
+  const ordersuccess = () => {
+    history.push("/ordersuccess");
+    toast("Purchase order successfully. Wait for deliver!");
+  }
+
   return (
     <div
       className="mt-5"
@@ -19,9 +42,9 @@ const CartItem = () => {
       }}
     >
       <div className="container mt-5 pt-5">
-        <div className="row">
+        <div className="row align-items-center">
           <div className="col-md-5 text-start">
-            <Form>
+            <Form onSubmit={handleOrder}>
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridEmail">
                   <Form.Label>Email</Form.Label>
@@ -44,18 +67,16 @@ const CartItem = () => {
 
               <Form.Group className="mb-3" controlId="formGridAddress1">
                 <Form.Label>Address</Form.Label>
-                <Form.Control placeholder="1234 Main St" />
+                <Form.Control
+                  placeholder="1234 Main St"
+                  onChange={getAdddress}
+                />
               </Form.Group>
 
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridCity">
                   <Form.Label>City</Form.Label>
-                  <Form.Control />
-                </Form.Group>
-
-                <Form.Group as={Col} controlId="formGridZip">
-                  <Form.Label>Zip</Form.Label>
-                  <Form.Control />
+                  <Form.Control onBlur={getCity} />
                 </Form.Group>
               </Row>
 
@@ -65,16 +86,28 @@ const CartItem = () => {
             </Form>
           </div>
           <div className="col-md-7 mt-4">
-            <div className="border shadow-lg py-4">
+            <div className="border shadow-lg py-4 rounded-3">
               <h5 className="fw-bold">Cart Product</h5>
               <div className="container">
                 {cartProduct.map((cart) => (
-                    <CartItemProduct
-                        key={ cart.id}
-                    cart={cart}
-                  ></CartItemProduct>
+                  <CartItemProduct key={cart.id} cart={cart}></CartItemProduct>
                 ))}
-                <CartTOtalPrice/>
+                <CartTOtalPrice />
+                {city ? (
+                  <button className="btn btn-color fw-bold" onClick={ ordersuccess}>
+                    Confirm order
+                  </button>
+                ) : (
+                  <button className="btn btn-outline-success fw-bold disabled">
+                    Confirm order
+                  </button>
+                )}
+                <Link to="/allproducts">
+                  {" "}
+                  <button className="btn btn-color fw-bold mx-3">
+                    Buy more products
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

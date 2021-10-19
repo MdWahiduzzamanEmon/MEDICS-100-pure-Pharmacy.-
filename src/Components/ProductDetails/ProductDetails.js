@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { useAddCart } from '../../Context/AddtoCart';
 import useData from '../../Hooks/useData';
 import bg from '../../images/sheap.png'
-import CartTOtalPrice from '../CartItem/CartTOtalPrice';
+
 const ProductDetails = () => {
     const { productID } = useParams();
   const { handleToAddToCart } = useAddCart();

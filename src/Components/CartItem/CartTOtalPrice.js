@@ -15,7 +15,7 @@ const CartTOtalPrice = () => {
 
     return (
       <div>
-        <Table striped bordered hover size="sm">
+        <Table striped bordered hover size="sm" className="table-info">
           <tbody className="text-start">
             <tr>
               <th>SubTotal</th>

@@ -10,7 +10,7 @@ const CartItemProduct = (props) => {
             <div className="w-25 rounded-3">
               <img
                 src={props?.cart?.image}
-                alt={props?.cart?.image}
+                alt=''
                 className="w-50 border border-3 p-2 rounded-3"
               />
             </div>

@@ -26,7 +26,7 @@ const useFirebase = () => {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [loading, setLoading] = useState(true);
-  console.log(user);
+  // console.log(user);
     
     // google sign     
     const googleSignIn = () => {

@@ -10,6 +10,7 @@ import ProductDetails from '../ProductDetails/ProductDetails';
 import PrivateRoute from '../../PrivateRoute/PrivateRoute'
 import Footer from '../Footer/Footer';
 import CartItem from '../CartItem/CartItem';
+import SuccessfulOrder from '../SuccessfulOrder/SuccessfulOrder';
 
 const Routing = () => {
     return (
@@ -37,6 +38,9 @@ const Routing = () => {
             </Route>
             <Route path="/cartitem">
               <CartItem />
+            </Route>
+            <Route path="/ordersuccess">
+              <SuccessfulOrder />
             </Route>
             <Route path="*">
               <Error />
