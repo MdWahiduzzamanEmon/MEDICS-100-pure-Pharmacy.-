@@ -11,6 +11,10 @@ import { toast } from 'react-toastify';
 
 
 const CartItem = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
   const { user } = useAuth();
   const { cartProduct, setCartProduct } = useAddCart();
   const [address,setAddress]=React.useState("")

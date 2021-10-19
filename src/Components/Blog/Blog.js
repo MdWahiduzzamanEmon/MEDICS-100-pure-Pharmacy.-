@@ -5,6 +5,10 @@ import blog2 from '../../images/blog-img-2.jpg'
 import Banner2 from '../Home/Banner2/Banner2';
 import Brand from '../Home/Brand/Brand';
 const Blog = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
     return (
       <div
         className="mt-5 pt-5"

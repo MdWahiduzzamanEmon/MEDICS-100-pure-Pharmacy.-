@@ -8,6 +8,11 @@ import bg from '../../images/sheap.png'
 import TopSellingProduct from '../TopSellingProduct/TopSellingProduct';
 
 const ProductDetails = () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
     const { productID } = useParams();
   const { handleToAddToCart } = useAddCart();
     const { products } = useData();

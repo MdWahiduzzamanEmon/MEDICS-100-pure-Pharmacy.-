@@ -4,6 +4,10 @@ import aboutdct from '../../images/about-dct.png'
 import Experience from '../Experience/Experience';
 import Brand from '../Home/Brand/Brand';
 const AboutUs = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     return (
         <div
             // bg style 

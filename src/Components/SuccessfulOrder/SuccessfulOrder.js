@@ -3,6 +3,10 @@ import gifOrderImg from '../../images/loading-delivery.gif'
 import Iframe from "react-iframe";
 import bg from '../../images/sheap.png'
 const SuccessfulOrder = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
     return (
       <div
         className="mt-5 pt-5 big-text"

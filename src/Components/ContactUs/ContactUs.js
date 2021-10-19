@@ -3,6 +3,10 @@ import { FloatingLabel, Form } from 'react-bootstrap';
 import bg from '../../images/sheap.png'
 import Brand from '../Home/Brand/Brand';
 const ContactUs = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     return (
       <div
         style={{
