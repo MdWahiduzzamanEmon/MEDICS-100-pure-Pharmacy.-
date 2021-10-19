@@ -10,11 +10,12 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
 
-    const { googleSignIn, setLoading, setUser } = useAuth();
+    const { googleSignIn,twitterSignIn, setLoading, setUser } = useAuth();
     const location = useLocation();
     const redirect_url = location?.state?.from||"/home";
     const history = useHistory();
     
+    // google 
     const redirectGoogleSign = () => {
         googleSignIn()
             .then((result) => {
@@ -27,6 +28,26 @@ const Login = () => {
                 setLoading(false);
             })
     }
+// twitter 
+    const redirectTwitterSign = () => {
+        twitterSignIn()
+          .then((result) => {
+            setUser(result.user);
+            toast("Log in Succesfull. Enjoy!!");
+            history.push(redirect_url);
+          })
+          .catch((error) => {})
+          .finally(() => {
+            setLoading(false);
+          });
+    }
+
+// user email pass login 
+    const handleToLogin = () => {
+        
+    }
+
+
     return (
       <>
         <section
@@ -34,7 +55,7 @@ const Login = () => {
           className="form-bg pt-5 mt-5"
         >
           <div className="container mt-5 p-5 w-75 border shadow-lg form">
-            <Form>
+                    <Form onSubmit={ handleToLogin}>
               <div>
                 <img src={logo} alt="" className="img-fluid pb-4" />
               </div>
@@ -72,7 +93,10 @@ const Login = () => {
               >
                 <img src={googleLogo} alt="" className="img-fluid" />
               </button>
-              <button className="btn rounded-circle border border-info mx-3">
+              <button
+                className="btn rounded-circle border border-info mx-3"
+                onClick={redirectTwitterSign}
+              >
                 <img src={twitterLogo} alt="" className="img-fluid " />
               </button>
             </div>
