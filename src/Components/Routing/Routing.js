@@ -28,9 +28,9 @@ const Routing = () => {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/allproducts">
+            <PrivateRoute path="/allproducts">
               <AllProducts />
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/productDetails/:productID">
               <ProductDetails />
             </PrivateRoute>
