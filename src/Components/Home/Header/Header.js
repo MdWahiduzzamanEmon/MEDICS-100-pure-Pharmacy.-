@@ -5,9 +5,11 @@ import logo from '../../../images/site-logo.png'
 import { HashLink } from "react-router-hash-link";
 import useAuth from '../../../Hooks/useAuth';
 import defaultimg from '../../../images/profile-default-image.png'
+import { useAddCart } from '../../../Context/AddtoCart';
 
 const Header = () => {
     const { user, Logout } = useAuth();
+    const { cartProduct } = useAddCart();
     return (
       <div>
         <Navbar collapseOnSelect expand="lg" bg="light" fixed="top">
@@ -39,7 +41,7 @@ const Header = () => {
                   <p className="position-relative">
                     <i className="fas fa-shopping-cart navLink-color"></i>
                     <span className="position-absolute translate-middle badge rounded-circle bg-danger">
-                      99
+                      {cartProduct?.length}
                     </span>
                   </p>
                 </Nav.Link>

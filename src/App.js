@@ -7,6 +7,7 @@ import AuthProvider from './Context/AuthProvider';
 import { toast } from "react-toastify";
 
  import "aos/dist/aos.css"; 
+import AddtoCart from './Context/AddtoCart';
 
 
 
@@ -16,8 +17,9 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-       
-        <Routing></Routing>
+        <AddtoCart>
+          <Routing></Routing>
+        </AddtoCart>
       </AuthProvider>
     </div>
   );

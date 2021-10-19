@@ -15,8 +15,7 @@ const useData = () => {
         });
     }, []);
 
-    
-
+   
 
 
     return {
@@ -24,6 +23,7 @@ const useData = () => {
       products,
       filterProduct,
       setFilterProduct,
+    
     };
 };
 

@@ -9,6 +9,7 @@ import Home from '../Home/Home/Home';
 import ProductDetails from '../ProductDetails/ProductDetails';
 import PrivateRoute from '../../PrivateRoute/PrivateRoute'
 import Footer from '../Footer/Footer';
+import CartItem from '../CartItem/CartItem';
 
 const Routing = () => {
     return (
@@ -33,6 +34,9 @@ const Routing = () => {
             </Route>
             <Route path="/signin">
               <Login />
+            </Route>
+            <Route path="/cartitem">
+              <CartItem />
             </Route>
             <Route path="*">
               <Error />

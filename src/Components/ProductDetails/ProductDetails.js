@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { useAddCart } from '../../Context/AddtoCart';
 import useData from '../../Hooks/useData';
 import bg from '../../images/sheap.png'
+import CartTOtalPrice from '../CartItem/CartTOtalPrice';
 const ProductDetails = () => {
     const { productID } = useParams();
-    
+  const { handleToAddToCart } = useAddCart();
     const { products } = useData();
-    const [indivisualProduct, setIndivisualProduct] = useState();
+  const [indivisualProduct, setIndivisualProduct] = useState();
+  const [newQuantity, setNewQuantity] = useState(1);
+  const history =useHistory();
     // console.log(products);
     useEffect(() => {
       const Product = products?.find(
@@ -16,8 +21,26 @@ const ProductDetails = () => {
       setIndivisualProduct(Product);
     }, [products, productID]);
     
-    // const { image,name,price,description} = indivisualProduct;
-    // console.log(indivisualProduct);
+  if (indivisualProduct) {
+    indivisualProduct["quantity"] = newQuantity;
+  }
+  
+  const minusProduct = () => {
+    if (indivisualProduct.quantity < 1) {
+      return;
+    } else {
+      const newValue = indivisualProduct["quantity"] - 1;
+      setNewQuantity(newValue);
+    }
+     
+   };
+ const plusProduct = () => {
+   const newValue = indivisualProduct["quantity"] + 1;
+   setNewQuantity(newValue);
+  };
+  
+  const newPrice = indivisualProduct?.price * indivisualProduct?.quantity;
+  
     return (
       <>
         <section
@@ -46,7 +69,7 @@ const ProductDetails = () => {
                     {indivisualProduct?.name}
                   </h2>
                   <h4 className="fw-bold medium-text pb-3">
-                    Price: ${indivisualProduct?.price.toFixed(2)}
+                    Price: ${newPrice.toFixed(2)}
                   </h4>
                 </div>
                 <div>
@@ -57,20 +80,34 @@ const ProductDetails = () => {
                     <span className="big-text ">Brand Name:</span>{" "}
                     {indivisualProduct?.brand}
                   </h6>
-
-                  <h6 className="fw-bold">
-                    Quantity:{" "}
-                    <input
-                      type="number"
-                      name=""
-                      max="10"
-                      min="1"
-                      className="input-quantity"
-                    />
-                  </h6>
+                  <div>
+                    <div>
+                      <span onClick={minusProduct}>
+                        <i class=" fas fa-minus-circle text-info fs-5 cursor"></i>
+                      </span>
+                      <span className="fw-bold big-text mx-3">
+                        {newQuantity}
+                      </span>
+                      <span onClick={plusProduct}>
+                        <i className="fas fa-plus-circle text-info fs-5 cursor"></i>
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <div className="py-4">
-                  <button className="btn btn-color mx-2">Add to Cart</button>
+                  <button
+                    className="btn btn-color mx-2"
+                    onClick={() => {
+                      indivisualProduct.price = newPrice;
+                      history.push("/cartitem");
+                      handleToAddToCart(indivisualProduct);
+                      toast("Wow! Product Add to cart successfully");
+  
+                    }}
+                  >
+                    <i className="fas fa-shopping-cart text-warning me-2"></i>
+                    Add to Cart
+                  </button>
                   <Link to="/allproducts">
                     <button className="btn btn-color mx-2">
                       Back To Product
