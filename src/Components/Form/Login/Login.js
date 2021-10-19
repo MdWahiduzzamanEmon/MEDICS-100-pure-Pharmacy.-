@@ -130,7 +130,11 @@ const Login = () => {
             </Link>
             <span>
               <button
-                className="btn btn-outline-success rounded-pill my-3 ms-3 fw-bold"
+                className={
+                  email
+                    ? "btn btn-outline-success rounded-pill my-3 ms-3 fw-bold"
+                    : "btn btn-outline-success rounded-pill my-3 ms-3 fw-bold disabled"
+                }
                 onClick={handleResetPassword}
               >
                 Reset Password
