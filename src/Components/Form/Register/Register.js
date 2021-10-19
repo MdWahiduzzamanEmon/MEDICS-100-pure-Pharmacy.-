@@ -73,7 +73,7 @@ const Register = () => {
       }
     emailPassRegistration();
 
-    console.log(email, name, password);
+    // console.log(email, name, password);
   };
   // registration
   const emailPassRegistration = () => {

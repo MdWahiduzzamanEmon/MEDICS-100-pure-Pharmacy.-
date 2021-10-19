@@ -27,6 +27,9 @@ const Header = () => {
                 <Nav.Link as={HashLink} to="/home#product">
                   <span className="navLink-color">Products</span>
                 </Nav.Link>
+                <Nav.Link as={Link} to="/blog">
+                  <span className="navLink-color">Blog</span>
+                </Nav.Link>
                 <Nav.Link as={Link} to="/aboutus">
                   <span className="navLink-color">About Us</span>
                 </Nav.Link>

@@ -6,7 +6,7 @@ const CartTOtalPrice = () => {
     const { cartProduct } = useAddCart();
     let subTotal = 0;
     for (const cart of cartProduct) {
-        console.log(cart);
+        // console.log(cart);
         subTotal = parseInt(cart.price) + subTotal;
     }
     const deliveryRate = subTotal*.05;

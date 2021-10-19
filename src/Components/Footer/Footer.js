@@ -60,14 +60,14 @@ const Footer = () => {
                   </Link>
                 </p>
               </div>
-              <div className="col-md-3 col-6">
+              <div className="col-md-3 col-6 mt-md-0 mt-4">
                 <h3 className="fw-bold mb-3">Links</h3>
                 <p>Make An Appointment</p>
                 <p> Free Consultation</p>
                 <p> FAQs</p>
                 <p>Privacy Policy</p>
               </div>
-              <div className="col-md-3 col-6">
+              <div className="col-md-3 col-6 mt-md-0 mt-4">
                 <h3 className="fw-bold mb-3">Subscribe</h3>
                 <p>Subscribe to get the Latest News from us.</p>
                 <FloatingLabel

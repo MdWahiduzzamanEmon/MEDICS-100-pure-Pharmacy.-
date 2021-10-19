@@ -2,7 +2,7 @@ import React from 'react';
 
 const CartItemProduct = (props) => {
    
-    console.log(props?.cart);
+    // console.log(props?.cart);
     return (
       <div>
         <div className="container text-start pb-4">

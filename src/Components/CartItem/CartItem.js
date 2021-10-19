@@ -22,11 +22,11 @@ const CartItem = () => {
   }
   const getCity = (e) => {
     setCity(e.target.value)
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
   const handleOrder = (e) => {
     e.preventDefault();
-    console.log(city, address);
+    // console.log(city, address);
   }
   const ordersuccess = () => {
     history.push("/ordersuccess");
@@ -42,9 +42,10 @@ const CartItem = () => {
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}
-    ><h2 className="fw-bold big-text">
+    >
+      <h2 className="fw-bold big-text">
         Check Your Information and Confirm Your Order
-    </h2>
+      </h2>
       <div className="container mt-5 pt-5">
         <div className="row align-items-center">
           <div className="col-md-5 text-start">
@@ -56,6 +57,7 @@ const CartItem = () => {
                     type="email"
                     placeholder="Enter email"
                     value={user?.email}
+                    readOnly
                   />
                 </Form.Group>
 
@@ -65,6 +67,7 @@ const CartItem = () => {
                     type="text"
                     placeholder="Name"
                     value={user?.displayName}
+                    readOnly
                   />
                 </Form.Group>
               </Row>

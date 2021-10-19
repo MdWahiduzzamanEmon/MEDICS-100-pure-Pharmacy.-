@@ -1,6 +1,7 @@
 import React from 'react';
 import { FloatingLabel, Form } from 'react-bootstrap';
 import bg from '../../images/sheap.png'
+import Brand from '../Home/Brand/Brand';
 const ContactUs = () => {
     return (
       <div
@@ -11,7 +12,7 @@ const ContactUs = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="container mt-5 pt-5">
+        <div className="container mt-5 py-5">
           <h2 className="fw-bold big-text text-decoration-underline">
             Get In touch for any kind of Information
           </h2>
@@ -47,8 +48,8 @@ const ContactUs = () => {
               <button className="btn btn-color mt-4">Submit Comment</button>
             </div>
             <div className="col-md-6 text-start mt-5">
-                        <div className="row">
-                            <h3 className="fw-bold big-text">Our Branches--</h3>
+              <div className="row">
+                <h3 className="fw-bold big-text">Our Branches--</h3>
                 <div className="col-md-6 col-6 border-end border-bottom p-3">
                   <h5 className="fw-bold">Pharmacy City Center</h5>
                   <p className="p-text">Monday to Sunday 7 am to 9 pm</p>
@@ -87,6 +88,9 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <Brand />
         </div>
       </div>
     );

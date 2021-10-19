@@ -10,7 +10,7 @@ const AddtoCart = ({ children }) => {
     const [cartProduct, setCartProduct] = useState([]);
 
 
-    console.log(cartProduct);
+    // console.log(cartProduct);
 
 
   const handleToAddToCart = (product) => {

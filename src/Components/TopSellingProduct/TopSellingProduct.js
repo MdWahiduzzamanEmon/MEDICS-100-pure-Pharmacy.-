@@ -16,7 +16,7 @@ const TopSellingProduct = () => {
             backgroundAttachment: "fixed",
           }}
         >
-          <div data-aos="slide-up">
+          <div >
             <h1 className="py-3 fw-bold big-text text-uppercase">
               Top Selling Products
             </h1>
@@ -27,7 +27,7 @@ const TopSellingProduct = () => {
               products.
             </p>
           </div>
-          <Row xs={1} md={2} className="g-4" data-aos="slide-up">
+          <Row xs={1} md={2} className="g-4" >
             {products?.slice(5, 9).map((product) => (
               <Product key={product.id} product={product}></Product>
             ))}

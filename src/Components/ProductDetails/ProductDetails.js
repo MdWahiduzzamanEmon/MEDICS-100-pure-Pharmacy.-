@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { useAddCart } from '../../Context/AddtoCart';
 import useData from '../../Hooks/useData';
 import bg from '../../images/sheap.png'
+import TopSellingProduct from '../TopSellingProduct/TopSellingProduct';
 
 const ProductDetails = () => {
     const { productID } = useParams();
@@ -52,7 +53,7 @@ const ProductDetails = () => {
             backgroundAttachment: "fixed",
           }}
         >
-          <div className="container">
+          <div className="container pt-5">
             <div className="row">
               <div className="col-md-5">
                 <div className="border border-3 py-5">
@@ -83,7 +84,7 @@ const ProductDetails = () => {
                   <div>
                     <div>
                       <span onClick={minusProduct}>
-                        <i class=" fas fa-minus-circle text-info fs-5 cursor"></i>
+                        <i className=" fas fa-minus-circle text-info fs-5 cursor"></i>
                       </span>
                       <span className="fw-bold big-text mx-3">
                         {newQuantity}
@@ -102,7 +103,6 @@ const ProductDetails = () => {
                       history.push("/cartitem");
                       handleToAddToCart(indivisualProduct);
                       toast("Wow! Product Add to cart successfully");
-  
                     }}
                   >
                     <i className="fas fa-shopping-cart text-warning me-2"></i>
@@ -116,6 +116,9 @@ const ProductDetails = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <TopSellingProduct />
           </div>
         </section>
       </>

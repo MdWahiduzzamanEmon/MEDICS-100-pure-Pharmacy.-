@@ -13,6 +13,7 @@ import CartItem from '../CartItem/CartItem';
 import SuccessfulOrder from '../SuccessfulOrder/SuccessfulOrder';
 import AboutUs from '../AboutUs/AboutUs';
 import ContactUs from '../ContactUs/ContactUs';
+import Blog from '../Blog/Blog';
 
 
 const Routing = () => {
@@ -48,14 +49,17 @@ const Routing = () => {
             <Route path="/aboutus">
               <AboutUs />
             </Route>
-            <Route path="/conatctus">
-              <ContactUs/>
-            </Route>
+            <PrivateRoute path="/conatctus">
+              <ContactUs />
+            </PrivateRoute>
+            <PrivateRoute path="/blog">
+              <Blog />
+            </PrivateRoute>
             <Route path="*">
               <Error />
             </Route>
-                </Switch>
-                <Footer/>
+          </Switch>
+          <Footer />
         </Router>
       </div>
     );
