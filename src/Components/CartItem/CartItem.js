@@ -13,13 +13,14 @@ import { toast } from 'react-toastify';
 const CartItem = () => {
   const { user } = useAuth();
   const { cartProduct } = useAddCart();
-  const [address,setAddress]=React.useState("")
+  const [setAddress]=React.useState("")
   const [city, setCity] = React.useState("");
   const history = useHistory();
-
+// adress value 
   const getAdddress = (e) => {
     setAddress(e.target.value)
   }
+  // city value 
   const getCity = (e) => {
     setCity(e.target.value)
     // console.log(e.target.value);

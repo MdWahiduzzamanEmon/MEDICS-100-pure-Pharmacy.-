@@ -9,18 +9,20 @@ import Products from "../Products/Products";
 import Brand from "../Brand/Brand";
 
 const Home = () => {
+  // animation
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
     <div>
+      {/* all home components  */}
       <Banner />
       <Banner2 />
-          <Products />
-          <Experience />
-          <TopSellingProduct />
-          <Comment />
-          <Brand/>
+      <Products />
+      <Experience />
+      <TopSellingProduct />
+      <Comment />
+      <Brand/>
     </div>
   );
 };

@@ -12,6 +12,7 @@ const Header = () => {
     const { cartProduct } = useAddCart();
     return (
       <div>
+        {/* navbar   */}
         <Navbar collapseOnSelect expand="lg" bg="light" fixed="top">
           <Container>
             <Navbar.Brand as={Link} to="/home">
@@ -51,6 +52,8 @@ const Header = () => {
               </Nav>
 
               <Nav>
+
+                {/* signin user details  */}
                 {user?.uid ? (
                   <div className="d-flex justify-content-center align-items-center">
                     <h6 className="fw-bold">{user.displayName}</h6>

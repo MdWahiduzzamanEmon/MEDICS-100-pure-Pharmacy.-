@@ -25,7 +25,7 @@ const ProductDetails = () => {
   if (indivisualProduct) {
     indivisualProduct["quantity"] = newQuantity;
   }
-  
+  //  minus 
   const minusProduct = () => {
     if (indivisualProduct.quantity < 1) {
       return;
@@ -34,12 +34,14 @@ const ProductDetails = () => {
       setNewQuantity(newValue);
     }
      
-   };
+  };
+  
+  // plus 
  const plusProduct = () => {
    const newValue = indivisualProduct["quantity"] + 1;
    setNewQuantity(newValue);
   };
-  
+  // new price 
   const newPrice = indivisualProduct?.price * indivisualProduct?.quantity;
   
     return (
@@ -51,8 +53,8 @@ const ProductDetails = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
-          }}
-        >
+          }}>
+         {/* product details  */}
           <div className="container pt-5">
             <div className="row">
               <div className="col-md-5">
@@ -97,7 +99,8 @@ const ProductDetails = () => {
                 </div>
                 <div className="py-4">
                   <button
-                    className="btn btn-color mx-2"
+                  className="btn btn-color mx-2"
+                  // api update 
                     onClick={() => {
                       indivisualProduct.price = newPrice;
                       history.push("/cartitem");

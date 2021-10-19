@@ -12,7 +12,7 @@ const AddtoCart = ({ children }) => {
 
     // console.log(cartProduct);
 
-
+// cart product add 
   const handleToAddToCart = (product) => {
       const adding = [ ...cartProduct, {...product}] ;
     setCartProduct(adding);

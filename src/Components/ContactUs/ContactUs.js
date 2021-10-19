@@ -23,7 +23,7 @@ const ContactUs = () => {
                 Your email address will not be published. Required fields are
                 marked *
               </p>
-
+        {/* conatct form  */}
               <FloatingLabel
                 controlId="floatingInput"
                 label="Name"
@@ -48,7 +48,9 @@ const ContactUs = () => {
               <button className="btn btn-color mt-4">Submit Comment</button>
             </div>
             <div className="col-md-6 text-start mt-5">
-              <div className="row">
+                        <div className="row">
+                            
+                            {/* different bramces  */}
                 <h3 className="fw-bold big-text">Our Branches--</h3>
                 <div className="col-md-6 col-6 border-end border-bottom p-3">
                   <h5 className="fw-bold">Pharmacy City Center</h5>

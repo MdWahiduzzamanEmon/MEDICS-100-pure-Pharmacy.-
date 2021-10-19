@@ -3,7 +3,8 @@ import { Table } from 'react-bootstrap';
 import { useAddCart } from '../../Context/AddtoCart';
 
 const CartTOtalPrice = () => {
-    const { cartProduct } = useAddCart();
+  const { cartProduct } = useAddCart();
+  // pricing 
     let subTotal = 0;
     for (const cart of cartProduct) {
         // console.log(cart);

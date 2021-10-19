@@ -5,7 +5,8 @@ import Experience from '../Experience/Experience';
 import Brand from '../Home/Brand/Brand';
 const AboutUs = () => {
     return (
-      <div
+        <div
+            // bg style 
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
@@ -19,7 +20,8 @@ const AboutUs = () => {
             Wanted.
           </h1>
           <div className="row justify-content-center align-items-center">
-            <div className="col-md-6">
+                    <div className="col-md-6">
+                        {/* about doctor  */}
               <img src={aboutdct} alt="" className="img-fluid mt-5" />
             </div>
             <div className="col-md-6 text-start">
