@@ -30,8 +30,8 @@ const Header = () => {
                 <Nav.Link as={Link} to="/aboutus">
                   <span className="navLink-color">About Us</span>
                 </Nav.Link>
-                <Nav.Link as={Link} to="/contact">
-                  <span className="navLink-color">Contact</span>
+                <Nav.Link as={Link} to="/conatctus">
+                  <span className="navLink-color">Contact Us</span>
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
@@ -67,7 +67,7 @@ const Header = () => {
                       )}
                     </div>
                     <button className="btn" onClick={Logout}>
-                      <i className="fas fa-sign-out-alt navLink-color"></i>
+                      <i className="fas fa-sign-out-alt navLink-color fs-3"></i>
                     </button>
                   </div>
                 ) : (

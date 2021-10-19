@@ -11,6 +11,9 @@ import PrivateRoute from '../../PrivateRoute/PrivateRoute'
 import Footer from '../Footer/Footer';
 import CartItem from '../CartItem/CartItem';
 import SuccessfulOrder from '../SuccessfulOrder/SuccessfulOrder';
+import AboutUs from '../AboutUs/AboutUs';
+import ContactUs from '../ContactUs/ContactUs';
+
 
 const Routing = () => {
     return (
@@ -41,6 +44,12 @@ const Routing = () => {
             </Route>
             <Route path="/ordersuccess">
               <SuccessfulOrder />
+            </Route>
+            <Route path="/aboutus">
+              <AboutUs />
+            </Route>
+            <Route path="/conatctus">
+              <ContactUs/>
             </Route>
             <Route path="*">
               <Error />

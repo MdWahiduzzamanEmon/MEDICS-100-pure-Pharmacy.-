@@ -8,6 +8,8 @@ import CartItemProduct from './CartItemProduct';
 import CartTOtalPrice from './CartTOtalPrice';
 import { useHistory } from "react-router";
 import { toast } from 'react-toastify';
+
+
 const CartItem = () => {
   const { user } = useAuth();
   const { cartProduct } = useAddCart();
@@ -33,14 +35,16 @@ const CartItem = () => {
 
   return (
     <div
-      className="mt-5"
+      className="mt-5 pt-5"
       style={{
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
       }}
-    >
+    ><h2 className="fw-bold big-text">
+        Check Your Information and Confirm Your Order
+    </h2>
       <div className="container mt-5 pt-5">
         <div className="row align-items-center">
           <div className="col-md-5 text-start">
@@ -94,7 +98,10 @@ const CartItem = () => {
                 ))}
                 <CartTOtalPrice />
                 {city ? (
-                  <button className="btn btn-color fw-bold" onClick={ ordersuccess}>
+                  <button
+                    className="btn btn-color fw-bold"
+                    onClick={ordersuccess}
+                  >
                     Confirm order
                   </button>
                 ) : (
@@ -104,7 +111,7 @@ const CartItem = () => {
                 )}
                 <Link to="/allproducts">
                   {" "}
-                  <button className="btn btn-color fw-bold mx-3">
+                  <button className="btn mt-md-0 mt-3 btn-color fw-bold mx-3">
                     Buy more products
                   </button>
                 </Link>

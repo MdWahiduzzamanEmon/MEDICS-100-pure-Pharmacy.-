@@ -18,7 +18,7 @@ const Experience = () => {
         <div className="container py-5 mb-4">
           <div
             className="row justify-content-center align-items-center"
-            data-aos="slide-up"
+            data-aos="fade-up"
           >
             <div className="col-md-6 text-start">
               <h1 className="fw-bold big-text">

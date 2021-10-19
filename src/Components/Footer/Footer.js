@@ -53,7 +53,7 @@ const Footer = () => {
                 </p>
                 <p>
                   <Link
-                    to="/contact"
+                    to="/conatctus"
                     className="text-decoration-none text-white"
                   >
                     Contact
@@ -116,7 +116,9 @@ const Footer = () => {
           </div>
         </div>
         <section className="bg-info py-3">
-          <p className="pt-2">2021 &copy; all rights reserved by Medics||Md Wahiduzzaman Emon</p>
+          <p className="pt-2">
+            2021 &copy; all rights reserved by Medics||Md Wahiduzzaman Emon
+          </p>
         </section>
       </div>
     );
