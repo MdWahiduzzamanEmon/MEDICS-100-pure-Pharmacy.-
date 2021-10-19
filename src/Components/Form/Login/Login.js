@@ -7,14 +7,27 @@ import twitterLogo from "../../../images/logo-twitter-png-5860-32x32.ico";
 import { Form } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
 import { toast } from 'react-toastify';
-
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 const Login = () => {
 
-    const { googleSignIn,twitterSignIn, setLoading, setUser } = useAuth();
+    const {
+      googleSignIn,
+      twitterSignIn,
+      setLoading,
+      setUser,
+      handlePassword,
+      handleEmail,
+      password,
+      email,
+    } = useAuth();
     const location = useLocation();
     const redirect_url = location?.state?.from||"/home";
     const history = useHistory();
-    
+     const auth = getAuth();
     // google 
     const redirectGoogleSign = () => {
         googleSignIn()
@@ -43,10 +56,37 @@ const Login = () => {
     }
 
 // user email pass login 
-    const handleToLogin = () => {
-        
+    const handleToLogin = (e) => {
+        e.preventDefault();
+       
+        setLoading(true);
+        signInWithEmailAndPassword(auth, email, password)
+          .then((result) => {
+            // Signed in
+            toast("Log in Succesfull. Enjoy!!");
+            history.push(redirect_url);
+          })
+          .catch((error) => {
+            toast(error.message);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
     }
 
+    //reset password
+
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+          .then(() => {
+            // 
+              toast("Password reset email sent! Check your email ");
+            // ..
+          })
+          .catch((error) => {
+           
+          });
+    }
 
     return (
       <>
@@ -55,7 +95,7 @@ const Login = () => {
           className="form-bg pt-5 mt-5"
         >
           <div className="container mt-5 p-5 w-75 border shadow-lg form">
-                    <Form onSubmit={ handleToLogin}>
+            <Form onSubmit={handleToLogin}>
               <div>
                 <img src={logo} alt="" className="img-fluid pb-4" />
               </div>
@@ -66,6 +106,7 @@ const Login = () => {
                   type="email"
                   placeholder="name@example.com"
                   required
+                  onChange={handleEmail}
                 />
                 <label htmlFor="floatingInputCustom">Email</label>
               </Form.Floating>
@@ -75,6 +116,7 @@ const Login = () => {
                   type="password"
                   placeholder="Password"
                   required
+                  onChange={handlePassword}
                 />
                 <label htmlFor="floatingPasswordCustom">Password</label>
               </Form.Floating>
@@ -82,10 +124,18 @@ const Login = () => {
               <button className="btn btn-color rounded-pill my-3">
                 Sign In
               </button>
-              <Link to="/register" className="sign-in-design">
-                <p>Please Register?</p>
-              </Link>
             </Form>
+            <Link to="/register" className="sign-in-design">
+              <span>Please Register?</span>
+            </Link>
+            <span>
+              <button
+                className="btn btn-outline-success rounded-pill my-3 ms-3 fw-bold"
+                onClick={handleResetPassword}
+              >
+                Reset Password
+              </button>
+            </span>
             <div>
               <button
                 className="btn  rounded-circle border border-info mx-3"

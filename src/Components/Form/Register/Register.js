@@ -62,7 +62,15 @@ const Register = () => {
     e.preventDefault();
     if (password.length < 6) {
       toast("Password must be atleast 6 characters long");
-    }
+      }
+      if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+        toast("Two uppercase letters");
+        return;
+      }
+      if (!/(?=.*[!@#$&*])/.test(password)) {
+        toast("One special case letter (!@#$&*)");
+        return;
+      }
     emailPassRegistration();
 
     console.log(email, name, password);
@@ -145,21 +153,19 @@ const Register = () => {
             </Form.Floating>
 
             <button className="btn btn-color rounded-pill my-3">Sign Up</button>
-            <span>
-              <Link to="/signin" className="sign-in-design">
-                <p>Already Sign Up?</p>
-              </Link>
-            </span>
           </Form>
+          <Link to="/signin" className="sign-in-design">
+            <span >Already Sign Up?</span>
+          </Link>
           <div>
             <button
-              className="btn  rounded-circle border border-info mx-3"
+              className="btn  rounded-circle border border-info mx-3 mt-3"
               onClick={redirectGoogleSign}
             >
               <img src={googleLogo} alt="" className="img-fluid" />
             </button>
             <button
-              className="btn rounded-circle border border-info mx-3"
+              className="btn rounded-circle border border-info mx-3 mt-3"
               onClick={redirectTwitterSign}
             >
               <img src={twitterLogo} alt="" className="img-fluid " />
