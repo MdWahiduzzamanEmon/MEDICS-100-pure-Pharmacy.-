@@ -21,6 +21,7 @@ const AddtoCart = ({ children }) => {
   const value = {
     handleToAddToCart,
     cartProduct,
+    setCartProduct,
   };
 
   return <AuthAddCart.Provider value={value}>{children}</AuthAddCart.Provider>;

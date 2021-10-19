@@ -12,8 +12,8 @@ import { toast } from 'react-toastify';
 
 const CartItem = () => {
   const { user } = useAuth();
-  const { cartProduct } = useAddCart();
-  const [setAddress]=React.useState("")
+  const { cartProduct, setCartProduct } = useAddCart();
+  const [address,setAddress]=React.useState("")
   const [city, setCity] = React.useState("");
   const history = useHistory();
 // adress value 
@@ -32,6 +32,7 @@ const CartItem = () => {
   const ordersuccess = () => {
     history.push("/ordersuccess");
     toast("Purchase order successfully. Wait for deliver!");
+    setCartProduct([]);
   }
 
   return (
