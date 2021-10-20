@@ -29,7 +29,7 @@ const TopSellingProduct = () => {
           </div>
           {/* top selling product  */}
           <Row xs={1} md={2} className="g-4" >
-            {products?.slice(5, 9).map((product) => (
+            {products?.slice(5,9).map((product) => (
               <Product key={product.id} product={product}></Product>
             ))}
           </Row>

@@ -42,7 +42,7 @@ const Products = () => {
             backgroundAttachment: "fixed",
           }}
         >
-          <Row xs={1} md={4} className="g-4" data-aos="slide-up">
+          <Row xs={1} md={2} lg={4} className="g-4" data-aos="slide-up">
             {filterProduct?.slice(0, 8).map((product) => (
               <Product key={product.id} product={product}></Product>
             ))}

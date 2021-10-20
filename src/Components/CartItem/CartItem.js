@@ -8,13 +8,9 @@ import CartItemProduct from './CartItemProduct';
 import CartTOtalPrice from './CartTOtalPrice';
 import { useHistory } from "react-router";
 import { toast } from 'react-toastify';
-
+import emptyCart from '../../images/empty-cart.jpg'
 
 const CartItem = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
   const { user } = useAuth();
   const { cartProduct, setCartProduct } = useAddCart();
   const [address,setAddress]=React.useState("")
@@ -53,8 +49,9 @@ const CartItem = () => {
         Check Your Information and Confirm Your Order
       </h2>
       <div className="container mt-5 pt-5">
-        <div className="row align-items-center">
+        <div className="row">
           <div className="col-md-5 text-start">
+            <h3 className="text-center mb-4 big-text fw-bold">Delivery Address </h3>
             <Form onSubmit={handleOrder}>
               <Row className="mb-3">
                 <Form.Group as={Col} controlId="formGridEmail">
@@ -102,11 +99,18 @@ const CartItem = () => {
             <div className="border shadow-lg py-4 rounded-3">
               <h5 className="fw-bold">Cart Product</h5>
               <div className="container">
-                {cartProduct.map((cart) => (
-                  <CartItemProduct key={cart.id} cart={cart}></CartItemProduct>
-                ))}
+                {cartProduct.length === 0 ? (
+                  <img src={emptyCart} alt="" className="img-fluid" />
+                ) : (
+                  cartProduct.map((cart) => (
+                    <CartItemProduct
+                      key={cart.id}
+                      cart={cart}
+                    ></CartItemProduct>
+                  ))
+                )}
                 <CartTOtalPrice />
-                {city ? (
+                {city && address ? (
                   <button
                     className="btn btn-color fw-bold"
                     onClick={ordersuccess}

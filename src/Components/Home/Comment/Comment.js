@@ -101,9 +101,3 @@ const Comment = () => {
 };
 
 export default Comment;
-
-//  <img
-//    className="d-block w-50 mx-auto rounded-3"
-//    src={capsol}
-//    alt="First slide"
-//  />;
