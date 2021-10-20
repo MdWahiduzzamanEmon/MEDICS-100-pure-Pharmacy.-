@@ -23,17 +23,18 @@ const Blog = () => {
           <div className="row">
             <div className="col-md-4 text-start">
               <h4 className="big-text fw-bold">Categories</h4>
-              <li className="p-text py-3">Dental Care</li>
-              <li className="p-text py-3">Neurology</li>
-              <li className="p-text py-3">General Surgery</li>
-              <li className="p-text py-3">Rental Medicine</li>
-              <li className="p-text py-3">Orthopaedic</li>
-              <li className="p-text py-3">Eye Specialist</li>
+              <li className="p-text py-3 medium-white">Dental Care</li>
+              <li className="p-text py-3 medium-white">Neurology</li>
+              <li className="p-text py-3 medium-white">General Surgery</li>
+              <li className="p-text py-3 medium-white">Rental Medicine</li>
+              <li className="p-text py-3 medium-white">Orthopaedic</li>
+              <li className="p-text py-3 medium-white">Eye Specialist</li>
             </div>
             <div className="col-md-8 text-start">
               <div>
                 <img src={blog1} alt="" className="rounded-3 img-fluid" />
-                <p className="p-text pt-4">
+                <p className="p-text fw-bold mt-3">03 April 2021-News24</p>
+                <p className="p-text pt-3">
                   Efficiently myocardinate market-driven innovation via
                   open-source alignments. Dramatically engage
                   high-Phosfluorescently expedite impactful supply chains via
@@ -44,7 +45,8 @@ const Blog = () => {
               </div>
               <div className="my-3">
                 <img src={blog2} alt="" className="rounded-3 img-fluid" />
-                <p className="p-text pt-4">
+                <p className="p-text fw-bold mt-3">03 sept. 2021-News24</p>
+                <p className="p-text pt-3">
                   Efficiently myocardinate market-driven innovation via
                   open-source alignments. Dramatically engage
                   high-Phosfluorescently expedite impactful supply chains via
@@ -55,7 +57,8 @@ const Blog = () => {
               </div>
               <div>
                 <img src={blog1} alt="" className="rounded-3 img-fluid" />
-                <p className="p-text pt-4">
+                <p className="p-text fw-bold mt-3">05 January 2021-News24</p>
+                <p className="p-text pt-3">
                   Efficiently myocardinate market-driven innovation via
                   open-source alignments. Dramatically engage
                   high-Phosfluorescently expedite impactful supply chains via

@@ -11,6 +11,14 @@
 .medium-text{
   color: #02B9B1;
 }
+.medium-white{
+  color:#fff;
+  cursor: pointer;
+}
+.medium-white:hover{
+  color: #02B9B1;
+  transition: .5s ease all;
+}
 .big-text{
   color:#072264;
 }

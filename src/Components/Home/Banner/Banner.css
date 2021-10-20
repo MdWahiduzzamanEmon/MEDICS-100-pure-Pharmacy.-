@@ -4,7 +4,8 @@
   font-weight: bold;
 }
 .btn-color:hover{
-  background:#21A06A;
+  /* background:#21A06A; */
+  background:#043621;
   transition: .5s ease all;
   color:#fff;
 }

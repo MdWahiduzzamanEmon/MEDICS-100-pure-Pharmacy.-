@@ -23,7 +23,7 @@ const Product = (props) => {
             </Card.Body>
             <Link to={`/productDetails/${id}`}>
               <button className="w-50 mx-auto btn btn-color">
-                <i className="fas fa-pills text-warning me-3"></i>Details
+                <i className="fas fa-pills text-warning me-2"></i>Details
               </button>
             </Link>
           </Card>

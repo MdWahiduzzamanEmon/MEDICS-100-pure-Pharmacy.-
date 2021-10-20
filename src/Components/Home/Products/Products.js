@@ -14,7 +14,9 @@ const Products = () => {
     }
     return (
       <div className="container py-5" id="product">
-        <h2>Featured Products</h2>
+        <h2 className="fw-bold big-text text-uppercase pb-2">
+          Featured Products
+        </h2>
         <div>
           <button
             className="btn btn-warning fw-bold rounded mx-3"
@@ -23,7 +25,7 @@ const Products = () => {
             All
           </button>
           <button
-            className="btn btn-warning fw-bold rounded mx-3"
+            className="btn btn-outline-warning fw-bold rounded mx-3"
             onClick={() => handletoProduct("new")}
           >
             New
@@ -48,7 +50,7 @@ const Products = () => {
         </div>
         <div>
           <Link to="/allproducts">
-            <button className="btn btn-color mt-5 fw-bold rounded-pill">
+            <button className="btn btn-outline-success mt-5 fw-bold">
               All Product{" "}
             </button>
           </Link>

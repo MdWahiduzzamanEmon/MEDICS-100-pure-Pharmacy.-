@@ -27,7 +27,7 @@ const ContactUs = () => {
                 Your email address will not be published. Required fields are
                 marked *
               </p>
-        {/* conatct form  */}
+              {/* conatct form  */}
               <FloatingLabel
                 controlId="floatingInput"
                 label="Name"
@@ -52,11 +52,10 @@ const ContactUs = () => {
               <button className="btn btn-color mt-4">Submit Comment</button>
             </div>
             <div className="col-md-6 text-start mt-5">
-                        <div className="row">
-                            
-                            {/* different bramces  */}
+              <div className="row">
+                {/* different bramces  */}
                 <h3 className="fw-bold big-text">Our Branches--</h3>
-                <div className="col-md-6 col-6 border-end border-bottom p-3">
+                <div className="col-md-6 col-6 border-end border-bottom p-3 shadow-lg">
                   <h5 className="fw-bold">Pharmacy City Center</h5>
                   <p className="p-text">Monday to Sunday 7 am to 9 pm</p>
                   <p className="p-text">
@@ -77,14 +76,14 @@ const ContactUs = () => {
                     45 Hudson Street Villa Rica, GA 30180
                   </p>
                 </div>
-                <div className="col-md-6 col-6 border-bottom p-3">
+                <div className="col-md-6 col-6 border-bottom p-3 shadow-lg">
                   <h5 className="fw-bold">Pharmacy Delta</h5>
                   <p className="p-text">Monday to Sunday 7 am to 9 pm</p>
                   <p className="p-text">
                     45 Hudson Street Villa Rica, GA 30180
                   </p>
                 </div>
-                <div className="col-md-6 col-6 border-bottom border-end p-3">
+                <div className="col-md-6 col-6 border-bottom border-end p-3 shadow-lg">
                   <h5 className="fw-bold">Pharmacy Aqua</h5>
                   <p className="p-text">Monday to Sunday 7 am to 9 pm</p>
                   <p className="p-text">

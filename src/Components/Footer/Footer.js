@@ -31,22 +31,25 @@ const Footer = () => {
               <div className="col-md-3 col-6">
                 <h3 className="fw-bold mb-3">Explore</h3>
                 <p>
-                  <Link to="/home" className="text-decoration-none text-white">
+                  <Link
+                    to="/home"
+                    className="text-decoration-none medium-white"
+                  >
                     Home
                   </Link>
                 </p>
                 <p>
                   <Link
-                    to="/products"
-                    className="text-decoration-none text-white"
+                    to="/blog"
+                    className="text-decoration-none medium-white"
                   >
-                    Products
+                    Blog
                   </Link>
                 </p>
                 <p>
                   <Link
                     to="/aboutus"
-                    className="text-decoration-none text-white"
+                    className="text-decoration-none medium-white"
                   >
                     About Us
                   </Link>
@@ -54,7 +57,7 @@ const Footer = () => {
                 <p>
                   <Link
                     to="/conatctus"
-                    className="text-decoration-none text-white"
+                    className="text-decoration-none medium-white"
                   >
                     Contact
                   </Link>
@@ -62,10 +65,10 @@ const Footer = () => {
               </div>
               <div className="col-md-3 col-6 mt-md-0 mt-4">
                 <h3 className="fw-bold mb-3">Links</h3>
-                <p>Make An Appointment</p>
-                <p> Free Consultation</p>
-                <p> FAQs</p>
-                <p>Privacy Policy</p>
+                <p className="medium-white">Make An Appointment</p>
+                <p className="medium-white"> Free Consultation</p>
+                <p className="medium-white"> FAQs</p>
+                <p className="medium-white">Privacy Policy</p>
               </div>
               <div className="col-md-3 col-6 mt-md-0 mt-4">
                 <h3 className="fw-bold mb-3">Subscribe</h3>
