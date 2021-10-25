@@ -26,12 +26,18 @@ My project live link [Click here to go WebSite](https://medics-fd9e7.web.app/).
 2. Uses IDE- Visual Studio Code
 
 
-
+Fist Look on WebSite
 ![screenshot](https://user-images.githubusercontent.com/83487057/138705054-58bf5a48-55cc-4b36-8d2b-9c536e6270ce.png)
+Poducts
 ![screenshot2](https://user-images.githubusercontent.com/83487057/138705086-0f9570ed-c8ca-4f8b-b9c3-0afd10227564.png)
+Sign IN 
 ![screenshot3](https://user-images.githubusercontent.com/83487057/138705126-dd2dfded-b34b-4954-8d5b-a808cd2c578a.png)
+Registration
 ![screenshot4](https://user-images.githubusercontent.com/83487057/138705391-1143b9cb-fc75-4b1f-a991-884f7017237e.png)
+Product Details
 ![screenshot5](https://user-images.githubusercontent.com/83487057/138705709-572d3e9c-2e03-421c-a5d3-f4e4a8a377f0.png)
+Add to Cart
 ![screenshot6](https://user-images.githubusercontent.com/83487057/138705426-ed47e6b5-782e-4a5c-a140-8accb1e9323a.png)
+Confirm Order
 ![screenshot7](https://user-images.githubusercontent.com/83487057/138705441-52c28608-be44-4909-a0b3-a371d5aef3aa.png)
 
